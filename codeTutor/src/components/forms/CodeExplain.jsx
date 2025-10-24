@@ -1,9 +1,10 @@
-import React, { useActionState } from 'react'
+import React, { useActionState, useState } from 'react'
 import { explainCode } from '../../actions'
 import CodeExplanation from './CodeExplanation';
 import ErrorMessage from './Error';
 
 const CodeExplainForm = () => {
+    const [codeSnippet, setCodeSnippet] = useState('');
     const [state, formAction, isPending] = useActionState(explainCode, {
         success: false,
         data: null,
@@ -20,6 +21,11 @@ const CodeExplainForm = () => {
             // You can show error messages to the user here
         }
     }, [state]);
+
+    // Handle textarea changes
+    const handleCodeChange = (e) => {
+        setCodeSnippet(e.target.value);
+    };
 
     return (
         <div className='w-full max-w-4xl background-transparent mt-8 p-6 rounded-lg shadow-md'>
@@ -69,6 +75,8 @@ const CodeExplainForm = () => {
                         id='codeSnippet'
                         name="code"
                         required
+                        value={codeSnippet} // Controlled value
+                        onChange={handleCodeChange} // Update state on change
                         className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-white-800'
                         rows='6'
                         placeholder='Paste your code snippet here...'
