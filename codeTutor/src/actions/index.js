@@ -1,6 +1,15 @@
 "use server";
 
-export async function explainCode(formData) {
+export async function explainCode(prevState, formData) {
+  // Check if formData is actually a FormData object
+  if (!(formData instanceof FormData)) {
+    return {
+      success: false,
+      error: "Invalid form data",
+      data: null
+    };
+  }
+
   const code = formData.get("code");
   const language = formData.get("language");
   
