@@ -20,18 +20,13 @@ app.use(express.json());
 
 // Rate limiting
 const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100, // limit each IP to 100 requests per windowMs
+    windowMs: 15 * 60 * 1000,
+    max: 100,
     message: "Too many requests from this IP, please try again later.",
 });
 app.use(limiter);
 
-app.use(express.json({ limit: "10mb" })); // Body size limit
-
-// Sample route
-// app.get("/", (req, res) => {
-//   res.send("Hello, World!");
-// });
+app.use(express.json({ limit: "10mb" }));
 
 const API_KEY = process.env.NEBIUS_API_KEY;
 
