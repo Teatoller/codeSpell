@@ -1,35 +1,35 @@
-# Code in React 19
+# codeSpell
+- AI Code Explainer tool
 
-As React 19 is new, this scaffolding project is for everyone who wants to start coding in React 19.
+# Author name
+- Steven Ennis following a FreeCodeCamp tutorial by Tapas Adhikary
 
-It has:
+# Description of project
+- Express.js backend, a REST endpoint that talks to an LLM and integrated to a React 19 Frontend
 
-- Vite
-- React 19.2(Stable Version)
-- TailwindCSS 4.x
+# Project setup instructions
+- Follow Backend ReadMe to set up and start the server
+- Open new terminal and follow instructions on CodeTutor ReadMe file to set up and start frontend app
 
-## Create Your Own React 19 Project with Vite and TailwindCSS
-There are multiple ways you can utilize this repository to create your own project. The most straightforward way is by using the follwoing command from the command prompt/terminal:
+## Prerequisites
+- Version control [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-```bash
-npx degit atapas/code-in-react-19#main <YOUR_PROJECT_NAME>
-```
+## Project setup
 
-This will clone the repository to your project. Alternatively, you can fork this repo or create a new repo from the template by clicking on the button at the top-right corner.
+1. Create a folder on your machine `mkdir myproject`
+2. `cd myproject`
+3. Run `git https://github.com/Teatoller/codeSpell.git`
+4. `cd codeSpell`
+5. open **code-spell-application** in your chosen editor. For **vscode** enter `code .` on terminal and press enter.
+6. `git checkout main`
+7. `cd codeTutor`
 
-## 🫶 Support
-Liked it? You can show your support with a STAR(⭐).
+# Link to live site
+on the terminal run
+1. create .env file `touch .env`
+2. run `yarn install` on the terminal and then
+3. run `yarn dev`
 
-> Many Thanks to all the `Stargazers` who have supported this project with stars(⭐)
+Runs the app in the development mode.\
+Open [http://localhost:5173](http://localhost:5173).
 
-### Sponsor My Work
-
-> I am an independent educator and open-source enthusiast who creates meaningful projects to teach programming on my YouTube Channel. You can support my work by [sponsoring me on GitHub](https://github.com/sponsors/atapas).
-
-## Run it Locally
-
-- Clone or fork the repo
-- Install dependencies using `npm install` or `yarn install`
-- Run it using `npm run dev` or `yarn dev`
-
-The app will be available on `http://localhost:5173` by default.
