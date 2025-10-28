@@ -9,6 +9,8 @@
 
 # Project setup instructions
 - create an acount on Nebius and use this model [openai/gpt-oss-120b](https://studio.nebius.com/playground?models=openai/gpt-oss-120b)
+- Follow Backend ReadMe to set up and start the server
+- Open new terminal and follow instructions on CodeTutor folder ReadMe file to set up and start frontend app
 
 ## Prerequisites
 - Version control [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
